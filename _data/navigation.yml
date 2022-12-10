@@ -4,6 +4,8 @@ main:
     url: /about/
   - title:  "Papers"
     url: /categories/papers
+  - title: 'Study'
+    url: /categories/study
   - title: "Tags"
     url: /tags/
 
