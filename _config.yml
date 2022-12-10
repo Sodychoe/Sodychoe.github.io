@@ -128,6 +128,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/%ED%95%B4%EC%9D%B8-%EC%B5%9C-567b9a237/"
 
 # Site Footer
 footer:
@@ -141,9 +144,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url:  "https://github.com/Sodychoe"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/%ED%95%B4%EC%9D%B8-%EC%B5%9C-567b9a237/"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
