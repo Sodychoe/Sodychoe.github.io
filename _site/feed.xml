@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-08T20:57:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">예쁜 꿈을 만들자</title><subtitle>수학,머신러닝,딥러닝,컴퓨터과학 관련 지식 정리</subtitle><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><entry><title type="html">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(2015)</title><link href="http://localhost:4000/papers/first-post/" rel="alternate" type="text/html" title="Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(2015)" /><published>2022-12-07T00:00:00+09:00</published><updated>2019-04-13T22:06:00+09:00</updated><id>http://localhost:4000/papers/first-post</id><content type="html" xml:base="http://localhost:4000/papers/first-post/"><![CDATA[<p>아름다운 시작</p>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><summary type="html"><![CDATA[Yarin Gal , Zoubin Ghahramani]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-10T17:27:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">예쁜 꿈을 만들자</title><subtitle>수학,머신러닝,딥러닝,컴퓨터과학 관련 지식 정리</subtitle><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><entry><title type="html">Causal Understanding of Fake News Dissemination on Social Media</title><link href="http://localhost:4000/papers/causalfakenews-post/" rel="alternate" type="text/html" title="Causal Understanding of Fake News Dissemination on Social Media" /><published>2022-12-10T00:00:00+09:00</published><updated>2022-12-10T00:00:00+09:00</updated><id>http://localhost:4000/papers/causalfakenews-post</id><content type="html" xml:base="http://localhost:4000/papers/causalfakenews-post/"><![CDATA[<h2 id="introduction">INTRODUCTION</h2>
+
+<h2 id="related-work">RELATED WORK</h2>
+
+<h3 id="fake-news-detection">Fake News Detection</h3>
+
+<h3 id="propensity-scoring-methods">Propensity Scoring Methods</h3>
+
+<h2 id="problem-statement">PROBLEM STATEMENT</h2>
+
+<h2 id="the-proposed-framework">THE PROPOSED FRAMEWORK</h2>
+
+<h3 id="modeling-fake-news-dissemination">Modeling Fake News Dissemination</h3>
+
+<h3 id="learning-unbiased-sharing-behavior">Learning Unbiased Sharing Behavior</h3>
+
+<h3 id="identifying-causal-user-attributes">Identifying Causal User Attributes</h3>
+
+<h2 id="empirical-evaluation">EMPIRICAL EVALUATION</h2>
+
+<h3 id="experimental-setup">Experimental Setup</h3>
+
+<h3 id="evaluation-on-fake-news-dissemination">Evaluation on Fake News Dissemination</h3>
+
+<h3 id="evaluation-on-identifying-causal-user-attributes">Evaluation on Identifying Causal User Attributes</h3>
+
+<h2 id="discussion">DISCUSSION</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="causalinference" /><summary type="html"><![CDATA[Lu Cheng et al (KDD 2021)]]></summary></entry><entry><title type="html">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(ICML 2015)</title><link href="http://localhost:4000/papers/first-post/" rel="alternate" type="text/html" title="Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(ICML 2015)" /><published>2022-12-07T00:00:00+09:00</published><updated>2022-12-07T00:00:00+09:00</updated><id>http://localhost:4000/papers/first-post</id><content type="html" xml:base="http://localhost:4000/papers/first-post/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<h2 id="related-research">Related Research</h2>
+
+<h2 id="dropout-as-a-bayesian-approximation">Dropout as a Bayesian Approximation</h2>
+
+<h2 id="obtaining-model-uncertainty">Obtaining Model Uncertainty</h2>
+
+<h2 id="experiments">Experiments</h2>
+
+<h2 id="conclusions-and-future-research">Conclusions and Future Research</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="uncertainty" /><summary type="html"><![CDATA[Yarin Gal , Zoubin Ghahramani]]></summary></entry></feed>
