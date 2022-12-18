@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-10T17:27:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">예쁜 꿈을 만들자</title><subtitle>수학,머신러닝,딥러닝,컴퓨터과학 관련 지식 정리</subtitle><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><entry><title type="html">Causal Understanding of Fake News Dissemination on Social Media</title><link href="http://localhost:4000/papers/causalfakenews-post/" rel="alternate" type="text/html" title="Causal Understanding of Fake News Dissemination on Social Media" /><published>2022-12-10T00:00:00+09:00</published><updated>2022-12-10T00:00:00+09:00</updated><id>http://localhost:4000/papers/causalfakenews-post</id><content type="html" xml:base="http://localhost:4000/papers/causalfakenews-post/"><![CDATA[<h2 id="introduction">INTRODUCTION</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-19T00:21:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">예쁜 꿈을 만들자</title><subtitle>수학,머신러닝,딥러닝,컴퓨터과학 관련 지식 정리</subtitle><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><entry><title type="html">Structural Causal Model</title><link href="http://localhost:4000/study/scm1-post/" rel="alternate" type="text/html" title="Structural Causal Model" /><published>2022-12-17T00:00:00+09:00</published><updated>2022-12-17T00:00:00+09:00</updated><id>http://localhost:4000/study/scm1-post</id><content type="html" xml:base="http://localhost:4000/study/scm1-post/"><![CDATA[<h3 id="인과-추론을-위한-프레임워크를-먼저-정의하려고-한다">인과 추론을 위한 프레임워크를 먼저 정의하려고 한다</h3>
+
+<blockquote>
+  <p>이 포스트는</p>
+  <ul>
+    <li>CAUSAL INFERENCE IN STATISTICS: A PRIMER , Pearl et al.(2016)</li>
+    <li>Elements of Causal Inference : Foundations and Learning Algorithms , Peters et al.(2017)</li>
+  </ul>
+
+  <p>을 참고하여 작성하였다</p>
+</blockquote>
+
+<h1 id="1-scm--의-정의">1. SCM  의 정의</h1>
+
+<p>Structural Causal Model(SCM) 은 몆 가지 적절한 가정을 도입하여 주어진 데이터(observational data)에서의 인과추론을 가능하게 하는
+프레임워크라고 할 수 있다. Elements of causal inference 책에서 SCM의 엄밀한 정의를 살펴보면 다음과 같다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/113276452/208284794-4227b7a9-1cb6-40ae-bad0-3d11a5cd74ea.png" alt="책의 내용을 레이텍으로 작성해보았다" class="align-center" />
+ <em>책의 내용을 레이텍으로 작성함.</em></p>
+
+<p>평면 위에 d 개의 점(node) 이 있다고 하자. 각 점들의 관계를 함수로 표현할 수 있다고 가정한다.
+우리는 인과관계를 표현하고자 하기 떄문에 영향을 받는 대상이 거꾸로 다시 상대방에게 영향을 줄 수는 없다.
+앞으로 그래프로 SCM을 많이 표현하게 될 텐데 이런 조건을 각 점들끼리의 관계는 순환할 수 없다는 의미로 <strong>acyclic</strong> 이라고 한다.</p>
+
+<p>우리는 이제 점들을 관찰 데이터에서 모은 변수들로 생각할 것이다. SCM을 을 다루는 책에서는 보통 원인이 되는 변수와 결과가 되는 변수를(directed causes and effect)
+부모(parents) 와 자식(child) 이라고 표현한다. (표현이 조금 이상하지만 부모가 되는 변수는 여러 명일 수도 있다!) 그리고 각 변수들은 노이즈 $N_j$ 를 가지고 있다고 생각하고 이 노이즈들은 서로 독립이기 때문에 
+<strong>결합확률분포가 확률분포의 곱</strong>으로 표시된다고 가정한다.</p>
+
+<p>요약하자면 SCM 은  주어진 변수들에 대한  unique 한 결합확률분포를 정의한다고 생각할 수 있다.
+이것은 각 변수들의 관계가  acyclic 이라고 가정한 것,  noise 간의 독립성 가정으로부터 유도된다.</p>
+
+<h1 id="2-적절한-가정들">2. 적절한 가정들</h1>
+<p>위의 내용을 참고하면
+SCM 은 다음과 같은 가정들 위에서  construct 된다고 할 수 있다</p>
+
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="study" /><category term="study" /><category term="causal" /><category term="scm" /><category term="causaleffects" /><summary type="html"><![CDATA[SCM]]></summary></entry><entry><title type="html">Causal Understanding of Fake News Dissemination on Social Media</title><link href="http://localhost:4000/papers/causalfakenews-post/" rel="alternate" type="text/html" title="Causal Understanding of Fake News Dissemination on Social Media" /><published>2022-12-10T00:00:00+09:00</published><updated>2022-12-10T00:00:00+09:00</updated><id>http://localhost:4000/papers/causalfakenews-post</id><content type="html" xml:base="http://localhost:4000/papers/causalfakenews-post/"><![CDATA[<h2 id="introduction">INTRODUCTION</h2>
 
 <h2 id="related-work">RELATED WORK</h2>
 
@@ -24,7 +64,7 @@
 
 <h3 id="evaluation-on-identifying-causal-user-attributes">Evaluation on Identifying Causal User Attributes</h3>
 
-<h2 id="discussion">DISCUSSION</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="causalinference" /><summary type="html"><![CDATA[Lu Cheng et al (KDD 2021)]]></summary></entry><entry><title type="html">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(ICML 2015)</title><link href="http://localhost:4000/papers/first-post/" rel="alternate" type="text/html" title="Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(ICML 2015)" /><published>2022-12-07T00:00:00+09:00</published><updated>2022-12-07T00:00:00+09:00</updated><id>http://localhost:4000/papers/first-post</id><content type="html" xml:base="http://localhost:4000/papers/first-post/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<h2 id="discussion">DISCUSSION</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="causalinference" /><summary type="html"><![CDATA[Lu Cheng et al (KDD 2021)]]></summary></entry><entry><title type="html">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning</title><link href="http://localhost:4000/papers/first-post/" rel="alternate" type="text/html" title="Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning" /><published>2022-12-07T00:00:00+09:00</published><updated>2022-12-07T00:00:00+09:00</updated><id>http://localhost:4000/papers/first-post</id><content type="html" xml:base="http://localhost:4000/papers/first-post/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h2 id="related-research">Related Research</h2>
 
@@ -34,4 +74,4 @@
 
 <h2 id="experiments">Experiments</h2>
 
-<h2 id="conclusions-and-future-research">Conclusions and Future Research</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="uncertainty" /><summary type="html"><![CDATA[Yarin Gal , Zoubin Ghahramani]]></summary></entry></feed>
+<h2 id="conclusions-and-future-research">Conclusions and Future Research</h2>]]></content><author><name>Lab Sody</name><email> Sodychoe@icloud.com </email></author><category term="papers" /><category term="papers" /><category term="uncertainty" /><summary type="html"><![CDATA[Yarin Gal , Zoubin Ghahramani(ICML 2015)]]></summary></entry></feed>

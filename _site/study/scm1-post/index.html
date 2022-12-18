@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Causal Understanding of Fake News Dissemination on Social Media - 예쁜 꿈을 만들자</title>
-<meta name="description" content="Lu Cheng et al (KDD 2021)">
+<!-- begin _includes/seo.html --><title>Structural Causal Model - 예쁜 꿈을 만들자</title>
+<meta name="description" content="SCM">
 
 
   <meta name="author" content="Lab Sody">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content=" en_US">
 <meta property="og:site_name" content="예쁜 꿈을 만들자">
-<meta property="og:title" content="Causal Understanding of Fake News Dissemination on Social Media">
-<meta property="og:url" content="http://localhost:4000/papers/causalfakenews-post/">
+<meta property="og:title" content="Structural Causal Model">
+<meta property="og:url" content="http://localhost:4000/study/scm1-post/">
 
 
-  <meta property="og:description" content="Lu Cheng et al (KDD 2021)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-12-10T00:00:00+09:00">
+  <meta property="og:description" content="SCM">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-12-17T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/papers/causalfakenews-post/">
+
+<link rel="canonical" href="http://localhost:4000/study/scm1-post/">
 
 
 
@@ -278,16 +278,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Causal Understanding of Fake News Dissemination on Social Media">
-    <meta itemprop="description" content="Lu Cheng et al (KDD 2021)">
-    <meta itemprop="datePublished" content="2022-12-10T00:00:00+09:00">
+    <meta itemprop="headline" content="Structural Causal Model">
+    <meta itemprop="description" content="SCM">
+    <meta itemprop="datePublished" content="2022-12-17T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/papers/causalfakenews-post/" class="u-url" itemprop="url">Causal Understanding of Fake News Dissemination on Social Media
+            <a href="http://localhost:4000/study/scm1-post/" class="u-url" itemprop="url">Structural Causal Model
 </a>
           </h1>
           
@@ -298,7 +298,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-12-10T00:00:00+09:00">December 10, 2022</time>
+        <time datetime="2022-12-17T00:00:00+09:00">December 17, 2022</time>
       </span>
     
 
@@ -313,41 +313,55 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right ">
+          <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#introduction">INTRODUCTION</a></li><li><a href="#related-work">RELATED WORK</a></li><li><a href="#problem-statement">PROBLEM STATEMENT</a></li><li><a href="#the-proposed-framework">THE PROPOSED FRAMEWORK</a></li><li><a href="#empirical-evaluation">EMPIRICAL EVALUATION</a></li><li><a href="#discussion">DISCUSSION</a></li></ul>
+              <ul class="toc__menu"><li><a href="#1-scm--의-정의">1. SCM  의 정의</a></li><li><a href="#2-적절한-가정들">2. 적절한 가정들</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="introduction">INTRODUCTION</h2>
+        <h3 id="인과-추론을-위한-프레임워크를-먼저-정의하려고-한다">인과 추론을 위한 프레임워크를 먼저 정의하려고 한다</h3>
 
-<h2 id="related-work">RELATED WORK</h2>
+<blockquote>
+  <p>이 포스트는</p>
+  <ul>
+    <li>CAUSAL INFERENCE IN STATISTICS: A PRIMER , Pearl et al.(2016)</li>
+    <li>Elements of Causal Inference : Foundations and Learning Algorithms , Peters et al.(2017)</li>
+  </ul>
 
-<h3 id="fake-news-detection">Fake News Detection</h3>
+  <p>을 참고하여 작성하였다</p>
+</blockquote>
 
-<h3 id="propensity-scoring-methods">Propensity Scoring Methods</h3>
+<h1 id="1-scm--의-정의">1. SCM  의 정의</h1>
 
-<h2 id="problem-statement">PROBLEM STATEMENT</h2>
+<p>Structural Causal Model(SCM) 은 몆 가지 적절한 가정을 도입하여 주어진 데이터(observational data)에서의 인과추론을 가능하게 하는
+프레임워크라고 할 수 있다. Elements of causal inference 책에서 SCM의 엄밀한 정의를 살펴보면 다음과 같다.</p>
 
-<h2 id="the-proposed-framework">THE PROPOSED FRAMEWORK</h2>
+<p><img src="https://user-images.githubusercontent.com/113276452/208284794-4227b7a9-1cb6-40ae-bad0-3d11a5cd74ea.png" alt="책의 내용을 레이텍으로 작성해보았다" class="align-center" />
+ <em>책의 내용을 레이텍으로 작성함.</em></p>
 
-<h3 id="modeling-fake-news-dissemination">Modeling Fake News Dissemination</h3>
+<p>평면 위에 d 개의 점(node) 이 있다고 하자. 각 점들의 관계를 함수로 표현할 수 있다고 가정한다.
+우리는 인과관계를 표현하고자 하기 떄문에 영향을 받는 대상이 거꾸로 다시 상대방에게 영향을 줄 수는 없다.
+앞으로 그래프로 SCM을 많이 표현하게 될 텐데 이런 조건을 각 점들끼리의 관계는 순환할 수 없다는 의미로 <strong>acyclic</strong> 이라고 한다.</p>
 
-<h3 id="learning-unbiased-sharing-behavior">Learning Unbiased Sharing Behavior</h3>
+<p>우리는 이제 점들을 관찰 데이터에서 모은 변수들로 생각할 것이다. SCM을 을 다루는 책에서는 보통 원인이 되는 변수와 결과가 되는 변수를(directed causes and effect)
+부모(parents) 와 자식(child) 이라고 표현한다. (표현이 조금 이상하지만 부모가 되는 변수는 여러 명일 수도 있다!) 그리고 각 변수들은 노이즈 $N_j$ 를 가지고 있다고 생각하고 이 노이즈들은 서로 독립이기 때문에 
+<strong>결합확률분포가 확률분포의 곱</strong>으로 표시된다고 가정한다.</p>
 
-<h3 id="identifying-causal-user-attributes">Identifying Causal User Attributes</h3>
+<p>요약하자면 SCM 은  주어진 변수들에 대한  unique 한 결합확률분포를 정의한다고 생각할 수 있다.
+이것은 각 변수들의 관계가  acyclic 이라고 가정한 것,  noise 간의 독립성 가정으로부터 유도된다.</p>
 
-<h2 id="empirical-evaluation">EMPIRICAL EVALUATION</h2>
+<h1 id="2-적절한-가정들">2. 적절한 가정들</h1>
+<p>위의 내용을 참고하면
+SCM 은 다음과 같은 가정들 위에서  construct 된다고 할 수 있다</p>
 
-<h3 id="experimental-setup">Experimental Setup</h3>
-
-<h3 id="evaluation-on-fake-news-dissemination">Evaluation on Fake News Dissemination</h3>
-
-<h3 id="evaluation-on-identifying-causal-user-attributes">Evaluation on Identifying Causal User Attributes</h3>
-
-<h2 id="discussion">DISCUSSION</h2>
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
 
         
       </section>
@@ -364,9 +378,13 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#causalinference" class="page__taxonomy-item p-category" rel="tag">causalinference</a><span class="sep">, </span>
+      <a href="/tags/#causal" class="page__taxonomy-item p-category" rel="tag">causal</a><span class="sep">, </span>
     
-      <a href="/tags/#papers" class="page__taxonomy-item p-category" rel="tag">papers</a>
+      <a href="/tags/#causaleffects" class="page__taxonomy-item p-category" rel="tag">causaleffects</a><span class="sep">, </span>
+    
+      <a href="/tags/#scm" class="page__taxonomy-item p-category" rel="tag">scm</a><span class="sep">, </span>
+    
+      <a href="/tags/#study" class="page__taxonomy-item p-category" rel="tag">study</a>
     
     </span>
   </p>
@@ -383,7 +401,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#papers" class="page__taxonomy-item p-category" rel="tag">papers</a>
+      <a href="/categories/#study" class="page__taxonomy-item p-category" rel="tag">study</a>
     
     </span>
   </p>
@@ -391,30 +409,29 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-10T00:00:00+09:00">December 10, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-17T00:00:00+09:00">December 17, 2022</time></p>
 
       </footer>
 
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=Causal+Understanding+of+Fake+News+Dissemination+on+Social+Media%20http%3A%2F%2Flocalhost%3A4000%2Fpapers%2Fcausalfakenews-post%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Structural+Causal+Model%20http%3A%2F%2Flocalhost%3A4000%2Fstudy%2Fscm1-post%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fpapers%2Fcausalfakenews-post%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fstudy%2Fscm1-post%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fpapers%2Fcausalfakenews-post%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fstudy%2Fscm1-post%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/papers/first-post/" class="pagination--pager" title="Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
+      <a href="/papers/causalfakenews-post/" class="pagination--pager" title="Causal Understanding of Fake News Dissemination on Social Media
 ">Previous</a>
     
     
-      <a href="/study/scm1-post/" class="pagination--pager" title="Structural Causal Model
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -438,7 +455,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/study/scm1-post/" rel="permalink">Structural Causal Model
+        <a href="/papers/causalfakenews-post/" rel="permalink">Causal Understanding of Fake News Dissemination on Social Media
 </a>
       
     </h2>
@@ -450,7 +467,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-12-17T00:00:00+09:00">December 17, 2022</time>
+        <time datetime="2022-12-10T00:00:00+09:00">December 10, 2022</time>
       </span>
     
 
@@ -460,7 +477,7 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">SCM
+    <p class="archive__item-excerpt" itemprop="description">Lu Cheng et al (KDD 2021)
 </p>
   </article>
 </div>
@@ -565,8 +582,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/papers/causalfakenews-post/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/papers/causalfakenews-post"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/study/scm1-post/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/study/scm1-post"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
