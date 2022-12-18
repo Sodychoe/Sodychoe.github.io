@@ -1,7 +1,7 @@
 ---
-title:  "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(ICML 2015)"
+title:  "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning"
 
-excerpt: Yarin Gal , Zoubin Ghahramani
+excerpt: Yarin Gal , Zoubin Ghahramani(ICML 2015)
 
 toc : true
 
