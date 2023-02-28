@@ -12,5 +12,7 @@ taxonomy: papers
 
 # 관심 분야 
 
-1. Causal Inference(인과추론)
-2. NLP(자연어 처리)
+1. Causal Inference
+2. Graphical Neural Network
+3. Recommendation System
+4. AI-Fairness
