@@ -1,7 +1,7 @@
 ---
 title:  "Computational Statistics (1) : Computational Arithmetic"
 
-excerpt: GNN, GCN 
+excerpt: Computational Statistics,  
 
 toc : true
 toc_sticky : true  
