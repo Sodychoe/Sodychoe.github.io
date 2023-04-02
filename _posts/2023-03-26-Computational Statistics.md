@@ -1,7 +1,7 @@
 ---
 title:  "Computational Statistics (1) : Computational Arithmetic"
 
-excerpt: Computational Statistics,  
+excerpt: Computational Statistics, Computational Arithmetic
 
 toc : true
 toc_sticky : true  
