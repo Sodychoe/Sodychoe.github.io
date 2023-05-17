@@ -1,4 +1,3 @@
-
 ---
 title:  "QR Decomposition"
 

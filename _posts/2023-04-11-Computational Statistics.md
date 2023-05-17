@@ -1,4 +1,3 @@
-
 ---
 title:  "Newton-Raphson Algorithm"
 
