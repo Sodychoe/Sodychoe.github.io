@@ -1,7 +1,7 @@
 ---
 title:  Counterfactual
 
-excerpt: Causal Inference,  
+excerpt: Causal Inference  
 
 toc : true
 toc_sticky : true  
@@ -14,3 +14,6 @@ tags:
   - study
   - causal
 ---
+
+# References
+1. Elements of Causal Inference : Foundations and Learning Algorithms , Peters et al.(2017)
