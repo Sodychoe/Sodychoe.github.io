@@ -1,5 +1,5 @@
 ---
-title:  "Computational Statistics (1) : Computational Arithmetic"
+title:  "Computational Arithmetic"
 
 excerpt: Computational Statistics, Computational Arithmetic
 

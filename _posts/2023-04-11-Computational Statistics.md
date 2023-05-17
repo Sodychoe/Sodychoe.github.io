@@ -1,6 +1,6 @@
 
 ---
-title:  "Computational Statistics (4) : Newton-Raphson Algorithm"
+title:  "Newton-Raphson Algorithm"
 
 excerpt: Computational Statistics, Generalized Linear Regression, Newton-Raphson Algorithm 
 

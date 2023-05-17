@@ -1,6 +1,6 @@
 
 ---
-title:  "Computational Statistics (3) : QR Decomposition"
+title:  "QR Decomposition"
 
 excerpt: Computational Statistics, Matrix Factorization, QR decomposition 
 

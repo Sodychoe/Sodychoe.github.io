@@ -1,5 +1,5 @@
 ---
-title:  "Computational Statistics (2) : LU Decomposition"
+title:  "LU Decomposition"
 
 excerpt: Computational Statistics, Matrix Factorization, LU decomposition 
 
