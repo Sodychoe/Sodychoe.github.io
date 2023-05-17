@@ -16,3 +16,13 @@ tags:
   - causal
   - recsys
 ---
+
+# 0. Abstract
+
+# 1. Introduction
+
+# 2. Task Formulation
+
+# 3. Preliminary
+
+# 4. Counterfactual 
