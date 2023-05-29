@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title : "DevOps"
-    url: /categories/DevOps
+    url: /categories/devops
   - title:  "Papers"
     url: /categories/papers
   - title: 'Study'
