@@ -86,4 +86,50 @@ hi my name is kate
 
 # 5. 시간 측정 데코레이터 만들기
 
-# 5. 파이썬 클래스에서 사용하는 데코레이터 
+```python
+def timer(function):
+  import time
+  def wrapper(*args, **kwargs):
+    start = time.time()
+    value =function(*args, **kwargs)
+    print(f'실행 시간은 {round(time.time() - start, 2)} 초 입니다.')
+    return value
+  return wrapper
+
+@timer
+def add(*args):
+  sum = 0
+  for arg in args:
+    sum += arg
+  
+  return sum
+  
+@timer
+def prod(*args):
+  prod = 1 
+  for arg in args:
+    prod *= arg 
+
+  return prod
+
+
+print(add(*range(10000000)))
+print(prod(*range(1, 10+1)))
+
+실행 시간은 0.25 초 입니다.
+49999995000000
+
+실행 시간은 0.0 초 입니다.
+3628800
+
+```
+
+간단한 시간 측정 데코레이터를 만들어보았다.
+
+앞에서 설명하지 않은 부분은 기존 함수의 리턴값을
+
+데코레이터에서 받는 부분인데, 이는 wrapper 함수 안에 기존 함수의 리턴값을 저장해두고
+
+# 6. 파이썬 클래스에서 사용하는 데코레이터 
+
+# 7. property 데코레이터
