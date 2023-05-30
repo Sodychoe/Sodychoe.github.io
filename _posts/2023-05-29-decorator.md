@@ -49,7 +49,19 @@ time 라이브러리의 메소드를 사용하는 것이다.
 
 <script src="https://gist.github.com/Sodychoe/1974388ecd29858aff19a6abe95bb76e.js"></script>
 
+위에서 decorator_function 에 인자를 넣어 함수를 호출하는 부분을
+
+@ 문법을 사용하여 대체할 수 있다.
+
+데코레이터를 일단 정의하고 이를 사용허고 싶은 함수 제목 위에
+
+@(데코레이터 이름) 을 적어주면 된다. 
+
 # 4. *args 와 **kwargs 이용하여 데코레이터 만들기
+
+문제는 원래 함수도 인자를 받는 경우이다. 다음 예제를 보자.
+
+<script src="https://gist.github.com/Sodychoe/fa66a63f4cc0cd3801f9b8c844a471c5.js"></script>
 
 # 5. 시간 측정 데코레이터 만들기
 
