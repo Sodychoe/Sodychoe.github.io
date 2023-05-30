@@ -86,6 +86,8 @@ hi my name is kate
 
 # 5. 시간 측정 데코레이터 만들기
 
+아래 코드를 보자.
+
 ```python
 def timer(function):
   import time
