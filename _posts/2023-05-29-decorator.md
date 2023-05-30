@@ -1,5 +1,5 @@
 ---
-title:  "파이선 데코레이터 정리(Decorator)"
+title:  "파이썬 데코레이터 정리(Decorator)"
 
 excerpt: python
 
