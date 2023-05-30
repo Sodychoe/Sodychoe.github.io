@@ -59,9 +59,30 @@ time 라이브러리의 메소드를 사용하는 것이다.
 
 # 4. *args 와 **kwargs 이용하여 데코레이터 만들기
 
-문제는 원래 함수도 인자를 받는 경우이다. 다음 예제를 보자.
+문제는 원래 함수가 인자를 받아 동작하는 경우이다. 다음 예제를 보자.
 
 <script src="https://gist.github.com/Sodychoe/fa66a63f4cc0cd3801f9b8c844a471c5.js"></script>
+
+wrapper 에 인자를 추가하여 이를 해결할 수 있다.
+
+```python
+def decorator(function):
+    def wrapper(*args, **kwargs ):
+        print('위')
+        function(*args, **kwargs)
+        print('아래')
+    return wrapper
+    
+@decorator
+def hi(msg):
+    print('hi ' + msg)
+    
+hi('my name is kate')
+
+위
+hi my name is kate
+아래
+```
 
 # 5. 시간 측정 데코레이터 만들기
 
