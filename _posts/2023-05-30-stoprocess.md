@@ -36,6 +36,12 @@ Counting Process 라고 부른다.
 3. $$s<t \implies N(s) \leq N(t)$$.
 4. $$s<t \quad$$ 일 때, $$N(t)-N(s)$$ 는 구간 (s, t] 에서 발생하는 사건의 수와 같다.
 
+$$\begin{block}{Independent Increments}
+  \end{block}$$
+
+$$\begin{block}{Stationary Increments}
+  \end{block}$$
+
 # 3. 포아송 과정(Poisson Process) 
 
 # 4. References
