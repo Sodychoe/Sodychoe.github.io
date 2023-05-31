@@ -31,18 +31,31 @@ t는 보통 시간을 나타낸다. 이떄,
 확률 과정 $$\{N(t), t \geq 0 \}$$ 이 다음을 만족하면 이를
 Counting Process 라고 부른다. 
 
+이떄 $$N(t)$$ 를 시간 t 까지 발생한 사건의 총 횟수로 생각할 수 있다.
+
 1. $$N(t) \geq 0$$.
 2. $$N(t)$$ 는 정수 값을 가진다.
 3. $$s<t \implies N(s) \leq N(t)$$.
 4. $$s<t \quad$$ 일 때, $$N(t)-N(s)$$ 는 구간 (s, t] 에서 발생하는 사건의 수와 같다.
 
-$$\begin{block}{Independent Increments}
-  \end{block}$$
+**Independent Increments** 성질은 다음과 같다.
 
-$$\begin{block}{Stationary Increments}
-  \end{block}$$
+겹치지 않는 시간 구간에서 발생한 사건의 횟수는 서로 독립이다.
+
+즉, $$N(t) \perp N(t+s)-N(t)$$
+
+ **Stationary Increments** 성질은 다음과 같다.
+
+ 
 
 # 3. 포아송 과정(Poisson Process) 
+
+Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
+이를 rate $$\lambda$$ 를 가지는 Poisson Process 라고 한다. 
+
+1. ㅇ
+2. 2.
+3. 
 
 # 4. References
 
