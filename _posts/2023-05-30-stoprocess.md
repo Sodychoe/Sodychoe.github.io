@@ -79,9 +79,11 @@ P_0(t+h) &= P\{N(t+h)=0\}  \\
 &= P_0(t)[1-\lambda h + o(h)] \because \text{assumption 3,4]}
 \end{align}
 $$
+
 양변을 h로 나누고 정리하면 다음과 같다.
 
 $$\frac{P_0(t+h)-P_0(t)}{h}=\lambda P_0(t)+ \frac{o(h)}{h}.$$
+
 이제 미분계수의 정의와 o(h) 의 정의에 따라 이 식은 h가 0으로 한없이 가까워 질 때, 다음과 같다.
 
 $$P'_0(t)=- \lambda P_0(t)$$
