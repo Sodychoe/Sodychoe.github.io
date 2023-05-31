@@ -17,6 +17,8 @@ tags:
   - LU Decomposition
 ---
 
+# 1. 기본 행 연산
+
 자연수에는 약수라는 개념이 있고, 다항식에는 인수분해라는 개념이 있다.
 
 이것은 어느 한 원소를 곱셈이라는 연산으로 나타내는 것이다.
@@ -45,27 +47,86 @@ tags:
 그런데 재미있게도 한 행에 곱셈을 해주거나, 다른 행과 더하는 행위는
 **행렬의 곱셈** 으로 표현할 수 있다. 
 
-1. 한 행과 다른 행을 서로 맞바꾼다. 
-$$ I =
+정확하게는, 항등 행렬(Identity Matrix) 에 기본 행 연산을 취하고
+이를 우리가 원하는 행렬 왼쪽에다가 곱하면 같은 결과를 얻는다.
+
+이떄 항등 행렬에 기본 행 연산을 시행한 결과를 기본 행렬(Elementary Matrix) 라고 하며 밑 예시에서
+
+기본 행 연산의 종류에 따라 E 밑에 첨자를 붙여 구분하겠다.
+
+$$ A = 
 \begin{bmatrix}
-1 & 0 & 0 \\
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+$$ 
+
+라고 놓고 그 결과를 확인해보자.
+
+1. 한 행과 다른 행을 서로 맞바꾼다. 
+$$ E_1A =
+\begin{bmatrix}
 0 & 1 & 0 \\
+1 & 0 & 0 \\
 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+=
+\begin{bmatrix}
+d & e & f \\
+a & b & c \\
+g & h & i
 \end{bmatrix}
 $$
 1. 한 행에 0이 아닌 상수를 곱한다.
-$$ I =
+$$ E_2A =
 \begin{bmatrix}
-1 & 0 & 0 \\
+2 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+=
+\begin{bmatrix}
+2a & 2b & 2c \\
+d & e & f \\
+g & h & i
 \end{bmatrix}
 $$
 1. 한 행에 0이 아닌 상수를 곱하고 이를 다른 행에 더한다.
-$$ I =
+$$ E_3A =
 \begin{bmatrix}
 1 & 0 & 0 \\
-0 & 1 & 0 \\
+2 & 1 & 0 \\
 0 & 0 & 1
 \end{bmatrix}
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+=
+\begin{bmatrix}
+a & b & c \\
+2a+d & 2b+e & 2c+f \\
+g & h & i
+\end{bmatrix}
 $$
+
+이렇게 기본 행렬을 곱하는 것으로 연립방정식을 푸는 과정을
+
+행렬로 표현할 수 있으며, 이를 이용하여 LU 분해를 시작할 수 있다.
+
+
+# 2. LU 분해
+
+# 3. 숄레츠키 분해(Cholesky Decomposition)
