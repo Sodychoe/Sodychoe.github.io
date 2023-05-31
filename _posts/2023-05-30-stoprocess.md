@@ -65,41 +65,14 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 1. $$N(0)=0$$.
 2. Counting Process 는 stationary and independent increments 성질을 갖는다.
 3. $$P\{N(h)=1\}=\lambda h+ o(h)$$.
-4. $$P\{N(h) \geq 2\} = o(h)$$\\.
+4. $$P\{N(h) \geq 2\} = o(h)$$.
 
 여기서 o(h) 는 little-o notation 을 의미한다.
 
-증명은 다음과 같다. $$P_n(t) = P\{N(t)=n\}$$ 이라고 놓으면,
 
-$$
-\begin{align}
-P_0(t+h) &= P\{N(t+h)=0\}  \\
-&= P\{N(t)=0, N(t+h)-N(t)=0\} \hspace{4mm} \because \text{definition of the counting process}  \\
-&= P\{N(t)=0\}P\{N(t+h)-N(t)=0\} \because \text{independent increments}  \\
-&= P_0(t)[1-\lambda h + o(h)] \because \text{assumption 3,4]}
-\end{align}
-$$
+## 3.1  
 
-양변을 h로 나누고 정리하면 다음과 같다.
-
-$$\frac{P_0(t+h)-P_0(t)}{h}=\lambda P_0(t)+ \frac{o(h)}{h}.$$
-
-이제 미분계수의 정의와 o(h) 의 정의에 따라 이 식은 h가 0으로 한없이 가까워 질 때, 다음과 같다.
-
-$$P'_0(t)=- \lambda P_0(t)$$
-
-이 미분 방정식을 풀면 (상수 조건 : N(0)=0) $$P_0(t)=e^{- \lambda t}$$ 가 된다.
-
-$$n \geq 1$$ 일 때에는, 
-
-$$
-\begin{align}
-P_n(t+h) &= P\{N(t+h) = n \} \\
-&= P\{N(t)=n, N(t+h)-N(t)=0\}
-\end{align}
-$$
-
-
+## 3.2
 
 # 4. References
 
