@@ -15,7 +15,7 @@ tags:
   - stochastic_process
 ---
 
-# 1. 확률 과정
+# 1. 확률 과정(Stochastic Process)
 확률 과정 $$\mathbf{X} = \{X(t), t \in T\}$$ 은
 확률 변수들의 Collections 이다. 이 말은 각 t에 대하여 $$X(t)$$ 는 확률 변수라는 의미가 된다.
 
@@ -26,7 +26,7 @@ t는 보통 시간을 나타낸다. 이떄,
 
 이라고 한다.
 
-# 2. 포아송 분포
+# 2. 셈 과정(Counting Process)
 
 확률 과정 $$\{N(t), t \geq 0 \}$$ 이 다음을 만족하면 이를
 Counting Process 라고 부른다. 
@@ -36,7 +36,7 @@ Counting Process 라고 부른다.
 3. $$s<t \implies N(s) \leq N(t)$$.
 4. $$s<t \quad$$ 일 때, $$N(t)-N(s)$$ 는 구간 (s, t] 에서 발생하는 사건의 수와 같다.
 
-# 3. 포아송 과정 
+# 3. 포아송 과정(Poisson Process) 
 
 # 4. References
 
