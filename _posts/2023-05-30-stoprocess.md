@@ -31,7 +31,7 @@ t는 보통 시간을 나타낸다. 이떄,
 확률 과정 $$\{N(t), t \geq 0 \}$$ 이 다음을 만족하면 이를
 Counting Process 라고 부른다. 
 
-이떄 $$N(t)$$ 를 시간 t 까지 발생한 사건의 총 횟수로 생각할 수 있다.
+이때 $$N(t)$$ 를 시간 t 까지 발생한 사건의 총 개수로 생각할 수 있다.
 
 1. $$N(t) \geq 0$$.
 2. $$N(t)$$ 는 정수 값을 가진다.
@@ -46,16 +46,17 @@ Counting Process 라고 부른다.
 
  **Stationary Increments** 성질은 다음과 같다.
 
- 
+어떤 시간 구간에서 발생하는 사건의 개수는 오로지 시간 구간의 길이에만 의존한다. 
+
 
 # 3. 포아송 과정(Poisson Process) 
 
 Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 이를 rate $$\lambda$$ 를 가지는 Poisson Process 라고 한다. 
 
-1. ㅇ
-2. 2.
-3. 
+1. $$N(0)=0.$$
+2. Independent Increments 성질을 갖는다.
+3. $$\forall s,t \geq 0, P\{N(t+s)-N(s)=n\}=e^{\lambda t}\frac{(\lambda t)^{n}}{n!}, \hspace{4mm n=0,1,2 \cdots , .}$$
 
 # 4. References
 
