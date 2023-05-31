@@ -69,11 +69,11 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 
 여기서 o(h) 는 little-o notation 을 의미한다.
 
+# 4. Interarrival and Waiting Time
+포아송 과정을 이용한 모델링을 살펴보자.
 
-## 3.1  
 
-## 3.2
 
-# 4. References
+# 5. References
 
 1. Ross, Sheldon M. Stochastic processes. John Wiley & Sons, 1995.
