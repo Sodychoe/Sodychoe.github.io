@@ -58,6 +58,17 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 2. Independent Increments 성질을 갖는다.
 3. $$\forall s,t \geq 0, P\{N(t+s)-N(s)=n\}=e^{\lambda t}\frac{(\lambda t)^{n}}{n!}, \hspace{4mm} n=0,1,2 \cdots,$$.
 
+여기서 3번 조건은 stationary increments 를 의미한다.
+
+동치조건은 다음과 같다. 
+
+1. $$N(0)=0$$.
+2. Counting Process 는 stationary and independent increments 성질을 갖는다.
+3. $$P\{N(h)=1\}=\lambda h+ o(h)$$.
+4. $$P\{N(h) \geq 2\} = o(h)$$.
+
+여기서 o(h) 는 little-o notation 을 의미한다.
+
 
 # 4. References
 
