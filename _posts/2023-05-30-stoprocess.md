@@ -73,8 +73,8 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 
 $$
 \begin{align}
-P_0(t+h) &= P\{N(t+h)=0\} \\
-&= P\{N(t)=0, N(t+h)-N(t)=0\} \\
+P_0(t+h) &= P\{N(t+h)=0\} \hspace{4mm} \because \text{by definition} \\
+&= P\{N(t)=0, N(t+h)-N(t)=0\} \because \text{independent increments}  \\
 &= P\{N(t)=0\}P\{N(t+h)-N(t)=0\} \\
 &= P_o(t)[1-\lambda h + o(h)]
 \end{align}
