@@ -56,7 +56,7 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 
 1. $$N(0)=0$$.
 2. Independent Increments 성질을 갖는다.
-3. $$\forall s,t \geq 0, P\{N(t+s)-N(s)=n\}=e^{\lambda t}\frac{(\lambda t)^{n}}{n!}, \hspace{4mm} n=0,1,2 \cdots,$$
+3. $$\forall s,t \geq 0, P\{N(t+s)-N(s)=n\}=e^{\lambda t}\frac{(\lambda t)^{n}}{n!}, \hspace{4mm} n=0,1,2 \cdots,$$.
 
 
 # 4. References
