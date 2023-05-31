@@ -1,5 +1,5 @@
 ---
-title:  포아송 과정
+title:  포아송 과정 (1)
 
 excerpt: Stochastic Process  
 
@@ -72,6 +72,10 @@ Counting Process $$\{N(t), t \geq 0 \}$$ 가 다음을 만족하면
 # 4. Interarrival and Waiting Time
 포아송 과정을 이용한 모델링을 살펴보자.
 
+포아송 과정 하에서 $$X_1$$ 을 첫 번째 사건이 발생하는 시간, 1 이상의 $$n$$ 에 대하여, $$X_n$$ 을 $$(n-1)$$ 번 째 사건 발생 시간과 $$n$$ 번 째 사건 발생 시간
+사이의 간격이라고 하자.
+
+이는 새로운 확률 변수로 생각할 수 있다. $$X_n$$ 의 분포를 구해보자.
 
 
 # 5. References
