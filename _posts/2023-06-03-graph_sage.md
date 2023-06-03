@@ -90,4 +90,11 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 
 ![](https://user-images.githubusercontent.com/113276452/243048562-4764034b-72cc-4b18-be29-cdcf1a042ae8.png)
 
+입력 : 그래프 : $$\mathcal{G(V, E)}$$ , 피쳐 $$\{x_{\mathcal{v}}\}$$ ,
+깊이 K, 가중치 행렬 $$W^{k}$$, 비선형 함수 $$\sigma$$ , 미분가능한 집계 함수
+$$\text{AGGREGATE}_k, \forall \in \{1,2 \cdots, K\}$$, 이웃 $$\mathcal{N}: v \rightarrow 2^{\mathcal{V}}$$.
+
+출력 : 각 노드에 대한 임베딩 벡터 $$\mathbf{Z}_v$$.
+
 ## 3.2 Learning the parameters of GraphSAGE
+
