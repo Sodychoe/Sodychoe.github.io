@@ -78,4 +78,16 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 
 # 3. Proposed method : GraphSAGE
 
+핵심 아이디어는 로컬한 이웃으로부터 피쳐 정보를 집계하는 방법을 학습한다는 것이다.
 
+3.1 에서는 모형 파라미터가 이미 학습되었다고 가정하고, GraphSAGE 의 임베딩 생성 알고리즘을
+설명할 것이다.
+
+3.2 에서는 일반적인 그레디언트 경사하강법과 역전파 테크닉을 이용하여 어떻게 모형 파라미터를
+학습하는 지 설명할 것이다.
+
+## 3.1 Embedding generation algorithm (forward propagation)
+
+![](https://user-images.githubusercontent.com/113276452/243048562-4764034b-72cc-4b18-be29-cdcf1a042ae8.png)
+
+## 3.2 Learning the parameters of GraphSAGE
