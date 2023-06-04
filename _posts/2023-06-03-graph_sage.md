@@ -96,7 +96,7 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 
 출력 : 각 노드에 대한 최종 임베딩 벡터 $$\mathbf{Z}_v$$.
 
-**알고리즘 설명 **: 
+> **알고리즘 설명 **: 
 
 1. $$h_{v}^0 = x_v$$.
 2. 바깥 루프 : 레이어 갯수 K 만큼 반복 , 안쪽 루프의 결과 임베딩의 크기를 Normalize 한다.
@@ -106,7 +106,15 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 그 노드의 이웃을 샘플링해야한다 이 경우 안쪽 루프를 반복할 때, 모든 노드에 대해서 진행하지는 않는다.
 (자세한 부분은 Appendix 에 있다.)
 
-**Weisfeiler-Lehman Isomorphism Test**
+> **Weisfeiler-Lehman Isomorphism Test**
+
+
+> **Neighboorhood definition**
 
 ## 3.2 Learning the parameters of GraphSAGE
 
+## 3.3 Aggregator Architectures
+
+- Mean
+- LSTM
+- Pooling
