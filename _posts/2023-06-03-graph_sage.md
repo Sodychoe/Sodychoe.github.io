@@ -118,7 +118,7 @@ WL Test는 서로 다른 두 그래프가 isomorphic(동일한 그래프) 인 �
 
 이 논문에서는 고정된 사이즈의 이웃 집합을 각 반복 k 마다 다르게, uniform 하게 샘플링하였다.
 이렇게 하지 않으면 시간복잡도가 $$O(\lVert \mathcal{V} \rVert)$$ 가 된다.
-GraphSAGE 에서의 시간복잡도는 $$O(\lVert \pred_{i=1}^{K} S_i$$ 가 된다.
+GraphSAGE 에서의 시간복잡도는 $$O(\lVert \prod_{i=1}^{K} S_i$$ 가 된다.
 여기서 $$S_i$$ 와 K 는 하이퍼 파라미터이다. 이 논문에서는 K =2 , $$S_1 \cdot S_2 \leq 500$$
 이 가장 좋은 성능을 보였다고 한다. 
 
