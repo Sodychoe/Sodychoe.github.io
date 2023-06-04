@@ -91,10 +91,22 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 ![](https://user-images.githubusercontent.com/113276452/243048562-4764034b-72cc-4b18-be29-cdcf1a042ae8.png)
 
 입력 : 그래프 : $$\mathcal{G(V, E)}$$ , 피쳐 $$\{x_{\mathcal{v}}\}$$ ,
-깊이 K, 가중치 행렬 $$W^{k}$$, 비선형 함수 $$\sigma$$ , 미분가능한 집계 함수
-$$\text{AGGREGATE}_k, \forall \in \{1,2 \cdots, K\}$$, 이웃 $$\mathcal{N}: v \rightarrow 2^{\mathcal{V}}$$.
+깊이(레이어 갯수) K, 가중치 행렬 $$W^{k}$$, 비선형 함수 $$\sigma$$ , 
+미분가능한 집계 함수, $$\text{AGGREGATE}_k, k \forall \in \{1,2 \cdots, K\}$$, 이웃 $$\mathcal{N}: v \rightarrow 2^{\mathcal{V}}$$.
 
-출력 : 각 노드에 대한 임베딩 벡터 $$\mathbf{Z}_v$$.
+출력 : 각 노드에 대한 최종 임베딩 벡터 $$\mathbf{Z}_v$$.
+
+**알고리즘 설명 **: 
+
+1. $$h_{v}^0 = x_v$$.
+2. 바깥 루프 : 레이어 갯수 K 만큼 반복 , 안쪽 루프의 결과 임베딩의 크기를 Normalize 한다.
+3. 안쪽 루프 : 고정된 레이어 k에 대하여 그래프의 모든 노드에 대해 반복 <br> - 고정된 노드가 주어지면 그  노드 이웃들의 정보를 함수를 통해 집계함. <br> - 이전 시점 노드의 임베딩과 집계한 이웃의 정보를 Concat 하고 완전 FC Layer 통해 비선형함수에 통과시킴.
+
+이 알고리즘은 현재 Full-Batch 이다. 이를 Mini-batch 까지 확장하려면 입력된 노드에 대해서
+그 노드의 이웃을 샘플링해야한다 이 경우 안쪽 루프를 반복할 때, 모든 노드에 대해서 진행하지는 않는다.
+(자세한 부분은 Appendix 에 있다.)
+
+**Weisfeiler-Lehman Isomorphism Test**
 
 ## 3.2 Learning the parameters of GraphSAGE
 
