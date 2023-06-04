@@ -175,12 +175,27 @@ LSTM 은 순서 무관한 연산을 수행하지는 않는다.(LSTM 은 입력�
 ![](https://user-images.githubusercontent.com/113276452/243165501-5b9afae3-0e75-4dd5-872b-12aca5dd1433.png)
 
 
-3개의 데이터셋에 대하여 지도 학습에서의 손실 함수를 같이 사용한 경우와 그렇지 않은 경우의 F1-score 를 베이스라인 모형들과 비교하였다.
+3개의 데이터셋에 대하여 지도 학습에서의 손실 함수를 같이 사용한 경우와 그렇지 않은 경우의 <br> F1-score 를 베이스라인 모형들과 비교하였다.
 
 # 5. Theoretical analysis
 
 ![](https://user-images.githubusercontent.com/113276452/243165450-13743c3c-7a82-4948-a90a-f10770a4d5fb.png)
 
+이 Theorem 은 특정 조건을 만족하면 그래프의 모든 노드의 임베딩을 특정 클러스터링 계수에 가깝게 근사할 수 있다는 것이다.
+(클러스터링 계수는 그래프에서 노드의 바로 옆 이웃이 얼마나 잘 모였는지 측정하는 measure 라고 한다.)
+그래서 이 이론을 통해 GraphSAGE 가 그래프 구조를 학습할 수 있다는 것을 보여준다.
+
+Theorem 의 증명의 기본 아이디어는 각 노드가 유니크한 피쳐 representation 을 가지고 있다는 사실이다. 
+
+이 증명은 pooling 집계함수의 성질에 의존하는데, 이를 통해 GraphSAGE-pool 모형이 GraphSAGE-mean 보다
+성능이 좋다는 것을 짐작할 수 있었다고 한다.
 
 # Appendices 
 ![](https://user-images.githubusercontent.com/113276452/243181218-53d294fa-a1f5-4ed9-8f29-bcae3f1497d5.png)
+
+알고리즘 2는 알고리즘 1의 minibatch 버전이다.
+
+핵심 아이디어는 노드들을 샘플링하는 것이다. 
+
+Lines 2~7 이 샘플링하는 단계인데 집합 $$\mathcal{B}^k$$ 는 $$v \in \mathcal{B}^{k+1}$$ 노드의
+임베딩을 계산할 때 필요한 노드들을 가지고 있다. 
