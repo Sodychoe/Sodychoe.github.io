@@ -134,7 +134,7 @@ GraphSAGE 에서의 시간복잡도는 $$O(\lVert \prod_{i=1}^{K} S_i)$$ 가 된
 
 - $$v$$ : 고정된 길이의 랜덤 워크에서 노드 $$u$$ 근처에서 같이 발생하는 노드 
 - $$\sigma$$ : 시그모이드 함수
-- $$P_n$$ : negative 샘플링 분포 ()
+- $$P_n$$ : negative 샘플링 분포 (이웃에 포함되지 않는 노드를 의미함)
 - $$Q$$ : negative 샘플의 갯수 
 - $$z_u$$ : 손실 함수에 입력되는 임베딩
 
@@ -154,19 +154,33 @@ representational capacity 를 높게 가져가야 한다. 집계 함수의 대�
 
 이 논문에서는 이러한 집계 함수의 후보로 3가지를 사용한다.
 
-- Mean
+- Mean <br> 평균을 취하는 것은 transductive 한 GCN 의 콘볼루션 전파 법칙과 거의 동일하다. <br> 특히, 알고리즘 1 의 
+4번과 5번 lines 를 다음 식으로 대체함으로써 GCN의 inductive 한 변형을 이끌어낼 수 있다.
 ![](https://user-images.githubusercontent.com/113276452/243164268-41fbf641-663a-49d6-bdda-eb76ed2f58b7.png)
-- LSTM
-- Pooling
+이러한 convolutional aggregator 이 다른 집계 함수의 후보와 구분되는 점은 노드의 이전 레이어의 임베딩과 노드의 이웃 간의 
+concatenation 을 실행하지 않는다는 점이다.
+
+- LSTM <br> LSTM 은 Mean 함수와 비교할 때, 풍부한 expressive capability 를 지닌다. <br> 그런데
+LSTM 은 순서 무관한 연산을 수행하지는 않는다.(LSTM 은 입력을 순차적으로 받는다) 이 논문에서는 LSTM을
+노드의 이웃에 대해 임의의 순열에 적용하여 순서 무관한 집합에 대한 연산을 달성하였다. 
+
+- Pooling <br> max pooling 경우를 보자.
 ![](https://user-images.githubusercontent.com/113276452/243165383-c52daa82-d925-4012-89f5-a76816a00045.png)
+이웃 집합에 element-wise pooling 이 적용된다. $$\sigma$$ 는 임의의 비선형 함수이다. pooling 전에
+적용되는 함수는 여러 층의 퍼셉트론 신경망일 수 있지만, 이 실험에서는 하나의 층만을 사용하였다. 
 
 
 # 4. Experiments
 
 ![](https://user-images.githubusercontent.com/113276452/243165501-5b9afae3-0e75-4dd5-872b-12aca5dd1433.png)
 
+
+3개의 데이터셋에 대하여 지도 학습에서의 손실 함수를 같이 사용한 경우와 그렇지 않은 경우의 F1-score 를 베이스라인 모형들과 비교하였다.
+
 # 5. Theoretical analysis
 
 ![](https://user-images.githubusercontent.com/113276452/243165450-13743c3c-7a82-4948-a90a-f10770a4d5fb.png)
 
+
 # Appendices 
+![](https://user-images.githubusercontent.com/113276452/243181218-53d294fa-a1f5-4ed9-8f29-bcae3f1497d5.png)
