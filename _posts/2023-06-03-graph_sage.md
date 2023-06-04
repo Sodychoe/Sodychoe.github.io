@@ -91,7 +91,7 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 ![](https://user-images.githubusercontent.com/113276452/243048562-4764034b-72cc-4b18-be29-cdcf1a042ae8.png)
 
 입력 : 그래프 : $$\mathcal{G(V, E)}$$ , 피쳐 $$\{x_{\mathcal{v}}\}$$ ,
-깊이(레이어 갯수) K, 가중치 행렬 $$W^{k}$$, 비선형 함수 $$\sigma$$ , 
+깊이(레이어 갯수, 탐색 거리) K, 가중치 행렬 $$W^{k}$$, 비선형 함수 $$\sigma$$ , 
 미분가능한 집계 함수, $$\text{AGGREGATE}_k, k \forall \in \{1,2 \cdots, K\}$$, 이웃 $$\mathcal{N}: v \rightarrow 2^{\mathcal{V}}$$.
 
 출력 : 각 노드에 대한 최종 임베딩 벡터 $$\mathbf{Z}_v$$.
@@ -198,4 +198,5 @@ Theorem 의 증명의 기본 아이디어는 각 노드가 유니크한 피쳐 r
 핵심 아이디어는 노드들을 샘플링하는 것이다. 
 
 Lines 2~7 이 샘플링하는 단계인데 집합 $$\mathcal{B}^k$$ 는 $$v \in \mathcal{B}^{k+1}$$ 노드의
-임베딩을 계산할 때 필요한 노드들을 가지고 있다. 
+임베딩을 계산할 때 필요한 노드들을 가지고 있다. 그 노드들을 다음 배치에 넘겨준 뒤, 다시 노드들의 이웃을 샘플링한다. 
+나머지 단계는 알고리즘 1과 동일하다.
