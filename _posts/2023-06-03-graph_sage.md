@@ -124,6 +124,7 @@ GraphSAGE 에서의 시간복잡도는 $$O(\lVert \prod_{i=1}^{K} S_i)$$ 가 된
 
 
 ## 3.2 Learning the parameters of GraphSAGE
+![](https://user-images.githubusercontent.com/113276452/243154087-8b8d378a-0cff-4f8f-873e-d2d04665f99c.png)
 
 ## 3.3 Aggregator Architectures
 
