@@ -96,7 +96,7 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 
 출력 : 각 노드에 대한 최종 임베딩 벡터 $$\mathbf{Z}_v$$.
 
-> **알고리즘 설명 **: 
+> **알고리즘 설명** 
 
 1. $$h_{v}^0 = x_v$$.
 2. 바깥 루프 : 레이어 갯수 K 만큼 반복 , 안쪽 루프의 결과 임베딩의 크기를 Normalize 한다.
@@ -124,7 +124,23 @@ GraphSAGE 에서의 시간복잡도는 $$O(\lVert \prod_{i=1}^{K} S_i)$$ 가 된
 
 
 ## 3.2 Learning the parameters of GraphSAGE
+비지도학습 상황에서 최종 임베딩 벡터 $$\mathbf{z_u], u \in \mathcal{V}$$ 에 대한 손실 함수를 정의해보자.
+이 손실 함수는 유사한 임베딩을 갖는 노드끼리는 더 가깝게, 서로 다른 임베딩을 갖는 노드끼리는 더 멀게 만들도록
+집게 함수와 가중치 벡터들의 파리미터들을 학습시킨다. 그 형태는 다음과 같다.
+
 ![](https://user-images.githubusercontent.com/113276452/243154087-8b8d378a-0cff-4f8f-873e-d2d04665f99c.png)
+
+이때 ,
+
+- $$v$$ : 고정된 길이의 랜덤 워크에서 노드 $$u$$ 근처에서 같이 발생하는 노드 
+- $$\sigma$$ : 시그모이드 함수
+- $$P_n$$ : negative 샘플링 분포 
+- $$Q$$ : negative 샘플의 갯수 
+- $$z_u$$ : 손실 함수에 입력되는 임베딩
+
+논문에선 $$z_u$$ 가 $$u$$의 로컬한 이웃에서 수집된 피쳐들로부터 생성되었음을 강조하고 있다 <br>
+dd
+
 
 ## 3.3 Aggregator Architectures
 - Mean
