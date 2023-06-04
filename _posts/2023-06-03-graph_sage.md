@@ -108,8 +108,20 @@ Inductive 한 노드 임베딩 문제를 푸는 것은 매우 어렵다. transdu
 
 > **Weisfeiler-Lehman Isomorphism Test**
 
+WL Test는 서로 다른 두 그래프가 isomorphic(동일한 그래프) 인 지를 판별하는 알고리즘 이라 한다.
+논문에서는 GraphSAGE 가 이 알고리즘의 한 경우에 대한 신경망을 이용한 근사(approximation)라고 설명하고 있다.
+
+참고로 WL Test 를 통과한다고 두 그래프가 항상 isomorphic 인 것은 아니라고 한다.
+(만약 통과하지 못한다면, isomorphic 일 수는 없다.)
 
 > **Neighboorhood definition**
+
+이 논문에서는 고정된 사이즈의 이웃 집합을 각 반복 k 마다 다르게, uniform 하게 샘플링하였다.
+이렇게 하지 않으면 시간복잡도가 $$O(\lVert \mathcal{V} \rVert)$$ 가 된다.
+GraphSAGE 에서의 시간복잡도는 $$O(\lVert \pred_{i=1}^{K} S_i$$ 가 된다.
+여기서 $$S_i$$ 와 K 는 하이퍼 파라미터이다. 이 논문에서는 K =2 , $$S_1 \cdot S_2 \leq 500$$
+이 가장 좋은 성능을 보였다고 한다. 
+
 
 ## 3.2 Learning the parameters of GraphSAGE
 
