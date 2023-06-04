@@ -127,7 +127,19 @@ GraphSAGE 에서의 시간복잡도는 $$O(\lVert \prod_{i=1}^{K} S_i)$$ 가 된
 ![](https://user-images.githubusercontent.com/113276452/243154087-8b8d378a-0cff-4f8f-873e-d2d04665f99c.png)
 
 ## 3.3 Aggregator Architectures
-
 - Mean
+![](https://user-images.githubusercontent.com/113276452/243164268-41fbf641-663a-49d6-bdda-eb76ed2f58b7.png)
 - LSTM
 - Pooling
+![](https://user-images.githubusercontent.com/113276452/243165383-c52daa82-d925-4012-89f5-a76816a00045.png)
+
+
+# 4. Experiments
+
+![](https://user-images.githubusercontent.com/113276452/243165501-5b9afae3-0e75-4dd5-872b-12aca5dd1433.png)
+
+# 5. Theoretical analysis
+
+![](https://user-images.githubusercontent.com/113276452/243165450-13743c3c-7a82-4948-a90a-f10770a4d5fb.png)
+
+# Appendices 
