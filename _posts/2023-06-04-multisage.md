@@ -70,11 +70,41 @@ MultiSAGE 는 두 가지 연구 질문에 대한 대답이다.
 
 **RQ 1. 어떻게 적절한 컨텍스트를 찾는가(How to find proper context?)**
 
-**RQ 2. 어떻게 컨텍스트를 이용하는가(How to leverage context?)**
+현실 네트워크의 네트워크는 자주 multipartite 하다. 즉, 네트워크가 다양한 타입의 노드들을 가지고 있고 이는 
+자연스럽게 노드간 상호작용에 대한 컨텍스트를 제공한다. 이러한 점 때문에, 타겟 노드가 컨텍스트 노드를 multipartite
+네트워크로 모델링하는 것이 유용하다.
 
-# 2. Out Approach
+Pinterest의 예시를 보면 개인 board 에 'pin' 을 하여 유저들끼리 상호작용을 한다. 이렇게 만들어진 pin-board 그래프는
+multipartite (여기선 bipartite) 하다. pin node 를 target, board node 를 context node 로 취급한다.
+이것에 대한 직관은 매우 자연스럽다. 예를 들어, 두 개의 pin 이 fashion board 와 path 로 연결되어 있다면
+두 pin 의 임베딩은 가까울 것이다.
+
+**RQ 2. 어떻게 컨텍스트를 이용하는가(How to leverage context?)**
+MultiSAGE 는 GCN 에 상호작용 컨텍스트화를 핵심적인 이웃 간 콘볼루션 연산에 주입하여 확장한 것이다.
+각 타겟 노드에 대해 서로 다른 컨텍스트 노드들이 암시하는 조건 하에서 동적으로 다중 임베딩을 계산한다.
+
+특히, 유연한 피쳐 수준 임베딩의 projection 을 위한 학습가능한 컨텍스트의 마스킹 연산과
+그래프 콘볼루션 과정 중에서 노드 수준의 이웃 reweighing 를 위한 세 가지의
+컨텍스트 attention 매커니즘을 설계한다.
+
+# 2. Our Approach
 
 ## 2.1 Preliminaries
+
+![](https://user-images.githubusercontent.com/113276452/243671048-a9199ea0-b3bf-48c5-a430-8392f8577307.png)
+
+GCN 에서 ($$l+1$$) 번쨰 레이어의 아웃풋은 식 (1) 처럼 계산된다. 이때,
+
+-  $$\tilde{A}$$ : self-connection 을 포함한 인접행렬(Adjacency Matrix)
+-  $$\tilde{D}$$ : 대각성분이 $$\sum_{j} \tilde{A_ij}$$ 인 대각행렬
+
+![](https://user-images.githubusercontent.com/113276452/243671123-88b31158-ea08-43b9-9db5-4f3059cbaee4.png)
+
+
+
+![](https://user-images.githubusercontent.com/113276452/243671227-b596b59e-11fa-4091-8025-0e124c3f2d7c.png)
+
+
 
 ## 2.2 MultiSAGE
 
