@@ -149,8 +149,12 @@ Figure (3) 을 통해 이웃 집계에서의 컨텍스트의 중요성을 확인
 임베딩에 더 많은 영향을 주기 떄문에 바람직하다고 할 수 있다. 이를 위해서 각 ego 와 이웃한 타겟 노드 사이에 있는
 컨텍스트들을 찾아내야 한다. 간단함을 위하여, 상호작용을 최고로 인코딩하는 한 개의 주요한 컨텍스트 노드만을 찾는다.  
 
-ego $$v \mathcal{T}$$ 와 그 이웃 $$N_v \subset \mathcal{T}$$ 에 대해 주요한 컨텍스트 노드는
+ego $$v \in \mathcal{T}$$ 와 그 이웃 $$N_v \subset \mathcal{T}$$ 에 대해 주요한 컨텍스트 노드는
 $$o \sim (v, u) \in C$$ 이다.
+
+**Raw featrue transformation**
+
+**Contextual Masking**
 
 ## 2.3 Web-scale Implementation of MultiSAGE
 
