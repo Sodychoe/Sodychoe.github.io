@@ -136,8 +136,21 @@ GCN 의 capacity + GraphSAGE 의 scalability 를 온전히 사용하기 위해 P
 
 ![](https://user-images.githubusercontent.com/113276452/243693601-ef28904a-cd77-4ef6-beb5-b74970d66d5f.png)
 
+GraphSAGE 와 비슷하게, MultiSAGE 는 타겟 노드의 이웃들에 기반하여 타겟 노드에 대한 임베딩을 학습한다.(target 을 ego 라고도 한다.)
+다른 점은, GraphSAGE 가 모든 이웃에 대해 동일한 집계함수를 사용하지만, MultiSAGE 는 ego 와 그 이웃간의 상호작용을 지원하는
+컨텍스트 노드를 활용한다. 
 
+Figure (3) 을 통해 이웃 집계에서의 컨텍스트의 중요성을 확인할 수 있다. (a) 를 보면 세 개의 이웃한 pin 들이 mean pooling 을 이용하여
+집계될 때, 그 결과 임베딩은 단지 세 pin 들의 중심에 놓이게 되고 ego 에 대한 각 노드들의 영향력이 똑같다는 것을 반영한다.
+이와는 다르게 (b) 에서는 ego 의 두 이웃 노드 중 하나는 fashion board 를 통해 연결되어 있고 다른 하나는 crafts board 를 통해
+연결되어 있다. 이 경우세는 fashion 방향 쪽으로 임베딩이 향하게 된다.
 
+타겟 노드에 대한 이러한 컨텍스트화는 이웃이 노드와 유사한 각 특정한 측면이 있어서 대응하는 부분공간에서
+임베딩에 더 많은 영향을 주기 떄문에 바람직하다고 할 수 있다. 이를 위해서 각 ego 와 이웃한 타겟 노드 사이에 있는
+컨텍스트들을 찾아내야 한다. 간단함을 위하여, 상호작용을 최고로 인코딩하는 한 개의 주요한 컨텍스트 노드만을 찾는다.  
+
+ego $$v \mathcal{T}$$ 와 그 이웃 $$N_v \subset \mathcal{T}$$ 에 대해 주요한 컨텍스트 노드는
+$$o \sim (v, u) \in C$$ 이다.
 
 ## 2.3 Web-scale Implementation of MultiSAGE
 
