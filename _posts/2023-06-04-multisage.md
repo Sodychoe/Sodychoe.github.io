@@ -37,8 +37,6 @@ interaction contextualization 을 달성하기 위해
 결론적으로, 그래프 콘볼루션 연산에서 서로 다른 상호작용들과 다양한  facets 를 포착하는 노드들에 대한 다중 임베딩을 계산한다.
 이는 미세 조정된 다운스트림 테스크 적용에 유용하게 사용될 수 있다.
 
-(나머지는 실험 세팅 얘기라서 생략함)
-
 # 1. Introduction
 
 ![](https://user-images.githubusercontent.com/113276452/243555339-84c875c0-87ab-4165-a7bd-edf7acef330e.png)
@@ -119,6 +117,25 @@ GCN 의 capacity + GraphSAGE 의 scalability 를 온전히 사용하기 위해 P
 
 
 ## 2.2 MultiSAGE
+
+![](https://user-images.githubusercontent.com/113276452/243680585-f98b73da-6da2-47e8-bc9b-7c764a41bb79.png)
+
+이 논문에서는 여기서 발전하여 노드들을 target 과 context 로 분리함으로써 현실 네트워크의 heterogeneity 를 활용하려 한다.
+주요한 부분은 타겟 노드들간의 관계를 설명하는 컨텍스트 노드들을 사용하여 타겟 노드들의 임베딩을 학습하는 것이다.
+
+이 논문에서는 간단한 논의를 위해 두 가지를 가정한다.
+
+1. 타겟 노드와 컨텍스트 노드를 분리할 때 , 최소한의 도메인 지식을 이용가능하다.
+2. 타겟 노드간의 중요한 상호작용은 대부분 컨텍스트 노드를 포함한다. 
+
+![](https://user-images.githubusercontent.com/113276452/243690006-596fbaf3-edc3-4863-afdf-71a68d03bc0f.png)
+
+이러한 가정들이 일반적이며, 현실적임을 보이기 위하여 많이 사용되는 몇몇 multipartite 네트워크들에 대한 예시를 Table 1 로
+정리하였다. 여기서 강조하는 부분은 이 논문에서 boards 라는 한 타입의 컨텍스트 노드만을 고려햐고 있지만, MultiSAGE 프레임워크는
+다른 타입의 노드들을 동시에, 쉽게 통합할 수 있다는 것이다.
+
+![](https://user-images.githubusercontent.com/113276452/243693601-ef28904a-cd77-4ef6-beb5-b74970d66d5f.png)
+
 
 
 
