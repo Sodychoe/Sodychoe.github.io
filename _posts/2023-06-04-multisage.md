@@ -163,12 +163,21 @@ $$\{W_t^{(K)}, W_c^{(K)}, b_t^{(K)}, b_c^{K}\}$$ 는 모두 학습하는 파라�
 
 
 **Contextual Masking**
+이제 컨텍스트 임베딩에 기반하여, 타겟 임베딩을 변환하고, 집계함수로 계산하여야 한다. 이 값은 $$z_{t|c}$$ 로 나타낸다.
 
-![](https://user-images.githubusercontent.com/113276452/243883933-420d4421-58b7-4b78-a73b-b1cd048e37bc.png)
+1. Element-wise multiplying 
+$$z_t \otimes z_c$$
+2. Element-wise summation
+3. concatenation
+
+
+**Contextual Attention**
 
 ![](https://user-images.githubusercontent.com/113276452/243884022-eb6c5308-a459-426a-b9a4-9072d88c0746.png)
 
 ![](https://user-images.githubusercontent.com/113276452/243884060-6f7b2369-4b00-400e-85ae-1f899dc3b033.png)
+
+
 
 ## 2.3 Web-scale Implementation of MultiSAGE
 
