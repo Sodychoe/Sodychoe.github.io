@@ -162,11 +162,10 @@ K개의 레이어를 통과한 후 피쳐 임베딩은 식 (4) 와 같다. 비�
 $$\{W_t^{(K)}, W_c^{(K)}, b_t^{(K)}, b_c^{K}\}$$ 는 모두 학습하는 파라미터들이다.
 
 
-**Contextual Masking**
+**Contextual Masking** <br>
 이제 컨텍스트 임베딩에 기반하여, 타겟 임베딩을 변환하고, 집계함수로 계산하여야 한다. 이 값은 $$z_{t|c}$$ 로 나타낸다.
 
 1. Element-wise multiplying 
-$$\mathbf{z_t} \otimes \mathbf{z_c}$$
 2. Element-wise summation
 3. concatenation
 
@@ -182,3 +181,5 @@ $$\mathbf{z_t} \otimes \mathbf{z_c}$$
 ## 2.3 Web-scale Implementation of MultiSAGE
 
 # 3. Experiments
+
+(작성 중)
