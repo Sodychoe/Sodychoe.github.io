@@ -150,11 +150,25 @@ Figure (3) 을 통해 이웃 집계에서의 컨텍스트의 중요성을 확인
 컨텍스트들을 찾아내야 한다. 간단함을 위하여, 상호작용을 최고로 인코딩하는 한 개의 주요한 컨텍스트 노드만을 찾는다.  
 
 ego $$v \in \mathcal{T}$$ 와 그 이웃 $$N_v \subset \mathcal{T}$$ 에 대해 주요한 컨텍스트 노드는
-$$o \sim (v, u) \in C$$ 이다.
+$$o \sim (v, u) \in C$$  이다.
 
 **Raw featrue transformation**
 
+![](https://user-images.githubusercontent.com/113276452/243883786-ee34c916-0515-451e-bdc2-0dfb2b9dd8d2.png)
+
+노드가 수억개인 경우, 개별 노드에 대해 임베딩하는 것은 불가능하다. 따라서 노드 갯수와 무관한 피쳐 임베딩 방법을 채택했다.
+타겟 노드와 컨텍스트 노드에 대한 raw feature 가 $$x_t, x_c$$ 일 떄,
+K개의 레이어를 통과한 후 피쳐 임베딩은 식 (4) 와 같다. 비선형 함수로 ReLU 사용하며
+$$\{W_t^{(K)}, W_c^{(K)}, b_t^{(K)}, b_c^{K}\}$$ 는 모두 학습하는 파라미터들이다.
+
+
 **Contextual Masking**
+
+![](https://user-images.githubusercontent.com/113276452/243883933-420d4421-58b7-4b78-a73b-b1cd048e37bc.png)
+
+![](https://user-images.githubusercontent.com/113276452/243884022-eb6c5308-a459-426a-b9a4-9072d88c0746.png)
+
+![](https://user-images.githubusercontent.com/113276452/243884060-6f7b2369-4b00-400e-85ae-1f899dc3b033.png)
 
 ## 2.3 Web-scale Implementation of MultiSAGE
 
